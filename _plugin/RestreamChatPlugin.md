@@ -34,7 +34,7 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 
 安装方法
 ---
-下载 `RestreamChatPlugin.dll`，放入 `我的文档\弹幕姬\plugins\`，重启弹幕姬即可。插件首次运行会在 `Plugins\RestreamChatPlugin\` 下自动创建数据目录，用于存放配置与表情缓存。
+[下载 `RestreamChatPlugin.dll`](https://github.com/wan0ge/RestreamChatPlugin/releases)，放入 `我的文档\弹幕姬\plugins\`，重启弹幕姬即可。插件首次运行会在 `Plugins\RestreamChatPlugin\` 下自动创建数据目录，用于存放配置与表情缓存。
 
 使用说明
 ---
@@ -53,6 +53,8 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 开源仓库
 ---
 源代码与问题反馈：<https://github.com/wan0ge/RestreamChatPlugin>
+
+弹幕姬插件中心：<https://www.danmuji.org/plugins/>
 
 更新日志
 ---
