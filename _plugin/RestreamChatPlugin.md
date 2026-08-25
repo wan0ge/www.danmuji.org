@@ -17,7 +17,11 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 
 插件界面
 ---
-<img class="shadow" src="https://www.danmuji.org/resource/RestreamChatPlugin/preview.png" alt="插件界面" />
+<img class="shadow" src="https://www.danmuji.org/resource/RestreamChatPlugin/preview.png" alt="消息效果预览" />
+
+设置窗口
+---
+<img class="shadow" src="https://www.danmuji.org/resource/RestreamChatPlugin/preview2.png" alt="设置窗口预览" />
 
 插件功能
 ---
