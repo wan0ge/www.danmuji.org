@@ -5,10 +5,10 @@ auther: wan0ge
 plugin_author: wan0ge
 plugin_name: Restream 聚合聊天
 plugin_desc: 通过 Restream Chat API 把多平台的聊天集成至弹幕姬（无需连接 B 站）
-plugin_version: 1.3.0
-plugin_update_datetime: 2026-08-25 13:30:00 +0800
+plugin_version: 1.4.0
+plugin_update_datetime: 2026-08-25 20:00:00 +0800
 plugin_update_desc: |-
-  初始发布：通过 Restream Chat API 聚合 Twitch/YouTube/Kick 等多平台直播聊天至弹幕姬。
+  独立浮层改为始终置顶（不被其它置顶应用覆盖）；第三方动态表情（BTTV/7TV 动画 GIF）现可在独立浮层播放；修正 BTTV/7TV 表情地址以适配当前 API。
 plugin_dllink: /resource/RestreamChatPlugin/RestreamChatPlugin.dll
 plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugins\ 重启弹幕姬即可
 ---
@@ -57,3 +57,4 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 更新日志
 ---
 - 2026-08-25 初始发布 v1.3.0
+- 2026-08-25 更新 v1.4.0：独立浮层始终置顶；动态表情（BTTV/7TV 动画 GIF）可播放；修正第三方表情地址适配当前 API
