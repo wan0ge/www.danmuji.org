@@ -34,9 +34,17 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 
 使用说明
 ---
-使用前需先准备 Restream 应用：在 [Restream 开发者后台](https://developers.restream.io/apps) 创建应用，记下 Client ID 与 Client Secret，并把回调地址（Redirect URI）设为 `http://localhost:8989/callback`。
+使用前需先在 Restream 侧准备应用（仅首次）：打开 [Restream](https://restream.io) 注册登录，在后台「Channels」添加并授权直播平台；打开 [Restream 开发者后台](https://developers.restream.io/apps) 创建应用，把 Redirect URI 设为 `http://localhost:8989/callback`、Scopes 勾选 `chat.read`，记下 Client ID 与 Client Secret。
 
-在弹幕姬「插件」选项卡找到 **Restream 聚合聊天**，右键「管理」打开设置窗口，在第①步填入 Client ID 与 Client Secret；点击「授权」登录 Restream 并允许 Chat API 访问，授权回调到本机后选择代理模式（默认系统代理），点击「保存并连接」或右键「启用」即可开始接收多平台聊天。
+在弹幕姬「插件」选项卡找到 **Restream 聚合聊天**，右键「管理」打开设置窗口，按五个步骤操作：
+
+1. **准备工作（仅首次）**：按上述在 Restream 侧建好应用，窗口内提供 Redirect URI 复制按钮可一键填入。
+2. **填入应用凭证**：填入 Client ID 与 Client Secret。
+3. **授权并连接**：点击「登录并授权」自动打开浏览器，登录并同意授权后插件通过本地回调自动拿到 token；若失败可用「手动粘贴 code」方式授权。
+4. **可选设置**：代理模式默认「直连（不使用代理）」，可改为「系统代理」或填写「自定义代理」；也可直接粘贴手动 access token。
+5. **显示与高级**：独立浮层（默认关，开启后把 Twitch / Kappa 等表情渲染成图片）、浮层布局与位置、调试日志。
+
+点击「保存并连接」或右键「启用」即可开始接收多平台聊天。
 
 开源仓库
 ---
