@@ -5,10 +5,10 @@ auther: wan0ge
 plugin_author: wan0ge
 plugin_name: Restream 聚合聊天集成
 plugin_desc: 通过 Restream Chat API 把多平台的聊天集成至弹幕姬（无需连接 B 站）
-plugin_version: 1.5.1
-plugin_update_datetime: 2026-08-26 03:36:00 +0800
+plugin_version: 1.5.3
+plugin_update_datetime: 2026-08-25 20:30:00 +0800
 plugin_update_desc: |-
-  独立浮层置顶增强：采用与弹幕姬自带浮层一致的机制（每秒重新置顶 + WS_EX_TRANSPARENT/TOOLWINDOW 扩展样式 + 失焦重断言），不再被全屏播放器等同样置顶的应用遮挡；动态表情动画渲染修正：改用 GDI+ 逐帧播放 GIF（规避 WPF 首帧缓存不刷新），并修复 Twitch 原生动画表情被当作静态图——Restream 下发的 v1 地址为静态 PNG，改为 v2 动画 GIF 地址下载后逐帧播放；插件名规范为「Restream 聚合聊天集成」（含中/日/英本地化）。
+  修复三处运行时行为与一处兼容性缺陷：① 旧版配置代理字段（Proxy）静默失效——旧版用户的自定义代理曾被错误置为直连，现已按旧语义迁移为自定义(custom)；② 401 鉴权失败时网络瞬断被误判为永久失效而锁死重连，现仅在服务器明确拒绝(4xx)时才提示重新授权，网络瞬断自动重试；③ 新增连接并发守卫，避免断连/重连间隙并发建出重复 WebSocket 导致同一聊天投两遍弹幕；④ 同步规范化测试注释。
 plugin_dllink: /resource/RestreamChatPlugin/RestreamChatPlugin.dll
 plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugins\ 重启弹幕姬即可
 ---
@@ -62,3 +62,5 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 - 2026-08-25 更新 v1.4.0：独立浮层始终置顶；动态表情（BTTV/7TV 动画 GIF）可播放；修正第三方表情地址适配当前 API
 - 2026-08-26 更新 v1.5.0：独立浮层置顶增强（全屏播放器等同样置顶应用不再遮挡）；动态表情动画渲染修正（改用 GDI+ 逐帧播放 GIF，并修复 Twitch 原生动画表情被当作静态图——改下 v2 动画 GIF 地址）
 - 2026-08-26 更新 v1.5.1：插件名规范为「Restream 聚合聊天集成」（弹幕姬插件选项卡名称、设置窗口标题与分组标签、GitHub 仓库描述与文档同步更新，含中/日/英本地化）。
+- 2026-08-25 更新 v1.5.2：修复 WebSocket 优雅关闭后不重连、token 401/403 误判为瞬断、畸形表情范围导致整条消息丢失、登录回调无超时（线程/端口泄漏）等缺陷。
+- 2026-08-25 更新 v1.5.3：修复旧版代理字段静默失效（自定义代理被置直连）、401 网络瞬断误锁死重连、新增连接并发守卫避免重复弹幕；测试注释规范化。
