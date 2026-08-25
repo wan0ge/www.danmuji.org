@@ -1,11 +1,11 @@
 ---
 hide: false
-title: Restream 聚合聊天
+title: Restream 聚合聊天集成
 auther: wan0ge
 plugin_author: wan0ge
-plugin_name: Restream 聚合聊天
+plugin_name: Restream 聚合聊天集成
 plugin_desc: 通过 Restream Chat API 把多平台的聊天集成至弹幕姬（无需连接 B 站）
-plugin_version: 1.5.0
+plugin_version: 1.5.1
 plugin_update_datetime: 2026-08-26 00:30:00 +0800
 plugin_update_desc: |-
   独立浮层置顶增强：采用与弹幕姬自带浮层一致的机制（每秒重新置顶 + WS_EX_TRANSPARENT/TOOLWINDOW 扩展样式 + 失焦重断言），不再被全屏播放器等同样置顶的应用遮挡；动态表情动画渲染修正：改用 GDI+ 逐帧播放 GIF（规避 WPF 首帧缓存不刷新），并修复 Twitch 原生动画表情被当作静态图——Restream 下发的 v1 地址为静态 PNG，改为 v2 动画 GIF 地址下载后逐帧播放。
@@ -40,7 +40,7 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 ---
 使用前需先在 Restream 侧准备应用（仅首次）：打开 [Restream](https://restream.io) 注册登录，在后台「Channels」添加并授权直播平台；打开 [Restream 开发者后台](https://developers.restream.io/apps) 创建应用，把 Redirect URI 设为 `http://localhost:8989/callback`、Scopes 勾选 `chat.read`，记下 Client ID 与 Client Secret。
 
-在弹幕姬「插件」选项卡找到 **Restream 聚合聊天**，右键「管理」打开设置窗口，按五个步骤操作：
+在弹幕姬「插件」选项卡找到 **Restream 聚合聊天集成**，右键「管理」打开设置窗口，按五个步骤操作：
 
 1. **准备工作（仅首次）**：按上述在 Restream 侧建好应用，窗口内提供 Redirect URI 复制按钮可一键填入。
 2. **填入应用凭证**：填入 Client ID 与 Client Secret。
