@@ -10,7 +10,7 @@ plugin_update_datetime: 2026-08-25 13:30:00 +0800
 plugin_update_desc: |-
   初始发布：通过 Restream Chat API 聚合 Twitch/YouTube/Kick 等多平台直播聊天至弹幕姬。
 plugin_dllink: /resource/RestreamChatPlugin/RestreamChatPlugin.dll
-plugin_dlnote: 把 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\Plugins\（根插件目录），重启弹幕姬即可；数据目录会自动创建，无需手动建立
+plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugins\ 重启弹幕姬即可
 ---
 
 通过 Restream Chat API 把 Twitch / YouTube / Kick 等多平台直播聊天聚合为弹幕姬弹幕，无需连接 B 站直播间。
@@ -30,7 +30,7 @@ plugin_dlnote: 把 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\Plugins\
 
 安装方法
 ---
-下载 `RestreamChatPlugin.dll`，直接放入 `我的文档\弹幕姬\Plugins\`（弹幕姬根插件目录，不要放进子文件夹；弹幕姬只扫描 Plugins 根目录下的 DLL，不会递归子文件夹），重启弹幕姬即可。插件首次运行会自动在 `Plugins\RestreamChatPlugin\` 下创建数据目录（存放配置文件与表情包缓存）。
+下载 `RestreamChatPlugin.dll`，放入 `我的文档\弹幕姬\plugins\`，重启弹幕姬即可。插件首次运行会在 `Plugins\RestreamChatPlugin\` 下自动创建数据目录，用于存放配置与表情缓存。
 
 使用说明
 ---
