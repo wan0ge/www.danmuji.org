@@ -8,7 +8,7 @@ plugin_desc: 通过 Restream Chat API 把多平台的聊天集成至弹幕姬（
 plugin_version: 1.6.0
 plugin_update_datetime: 2026-08-27 02:24:00 +0800
 plugin_update_desc: |-
-  修复两处缺陷：① 修复首次发送未缓存的 Twitch 原生动画表情时首条空白/不播放（改用可视化树挂载判定，确保异步下载完成后正确渲染与播放）；② 表情包下载日志去重，同一条消息中多处出现同一表情不再重复打印下载日志，与真实网络请求一一对应。
+  本次更新包含：① 不再内嵌 Newtonsoft.Json（遵循弹幕姬 SDK 部署规范，插件为单文件部署，无需额外依赖文件）；② 修复首次发送未缓存的 Twitch 原生动画表情时首条空白/不播放（改用可视化树挂载判定，确保异步下载完成后正确渲染与播放）；③ 表情包下载日志去重，同一条消息中多处出现同一表情不再重复打印下载日志，与真实网络请求一一对应。
 plugin_dllink: /resource/RestreamChatPlugin/RestreamChatPlugin.dll
 plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugins\ 重启弹幕姬即可
 ---
