@@ -5,10 +5,10 @@ auther: wan0ge
 plugin_author: wan0ge
 plugin_name: Restream 聚合聊天集成
 plugin_desc: 通过 Restream Chat API 把多平台的聊天集成至弹幕姬（无需连接 B 站）
-plugin_version: 1.5.3
-plugin_update_datetime: 2026-08-25 20:30:00 +0800
+plugin_version: 1.6.0
+plugin_update_datetime: 2026-08-27 02:24:00 +0800
 plugin_update_desc: |-
-  修复三处运行时行为与一处兼容性缺陷：① 旧版配置代理字段（Proxy）静默失效——旧版用户的自定义代理曾被错误置为直连，现已按旧语义迁移为自定义(custom)；② 401 鉴权失败时网络瞬断被误判为永久失效而锁死重连，现仅在服务器明确拒绝(4xx)时才提示重新授权，网络瞬断自动重试；③ 新增连接并发守卫，避免断连/重连间隙并发建出重复 WebSocket 导致同一聊天投两遍弹幕；④ 同步规范化测试注释。
+  修复两处缺陷：① 修复首次发送未缓存的 Twitch 原生动画表情时首条空白/不播放（改用可视化树挂载判定，确保异步下载完成后正确渲染与播放）；② 表情包下载日志去重，同一条消息中多处出现同一表情不再重复打印下载日志，与真实网络请求一一对应。
 plugin_dllink: /resource/RestreamChatPlugin/RestreamChatPlugin.dll
 plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugins\ 重启弹幕姬即可
 ---
@@ -30,7 +30,7 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 - 代理设置：直连 / 系统代理 / 自定义地址
 - 表情包图片渲染（独立浮层可选）
 - 中文 / 日本語 / English 本地化
-- 单文件部署（已内嵌 Newtonsoft.Json）
+- 单文件部署
 
 安装方法
 ---
@@ -64,3 +64,4 @@ plugin_dlnote: 下载 RestreamChatPlugin.dll 放入 我的文档\弹幕姬\plugi
 - 2026-08-26 更新 v1.5.1：插件名规范为「Restream 聚合聊天集成」（弹幕姬插件选项卡名称、设置窗口标题与分组标签、GitHub 仓库描述与文档同步更新，含中/日/英本地化）。
 - 2026-08-25 更新 v1.5.2：修复 WebSocket 优雅关闭后不重连、token 401/403 误判为瞬断、畸形表情范围导致整条消息丢失、登录回调无超时（线程/端口泄漏）等缺陷。
 - 2026-08-25 更新 v1.5.3：修复旧版代理字段静默失效（自定义代理被置直连）、401 网络瞬断误锁死重连、新增连接并发守卫避免重复弹幕；测试注释规范化。
+- 2026-08-27 更新 v1.6.0：不再内嵌 Newtonsoft.Json；修复首次发送未缓存 Twitch 原生动画表情首条空白/不播放；表情包下载日志去重。
